@@ -1,3 +1,11 @@
+:root {
+    --background-color: steelblue;
+    --text-light: #fff;
+    --border: 1px solid #000;
+    --max-width: 900px;
+    --padding: 20px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,20 +18,20 @@ body {
 }
 
 nav {
-    background-color: steelblue;
-    padding: 10px;
+    background-color: var(--background-color);
+    padding: var(--padding);
 }
 
 nav a {
     color: white;
     display: block;
-    padding: 20px;
+    padding: var(--padding);
 }
 
 h1 {
-    color: steelblue;
+    color: var(--background-color);
     padding: .5rem;
-    border-bottom: 1px solid #000;
+    border-bottom: var(--border);
 }
 
 main {
@@ -63,7 +71,7 @@ aside h2 {
 
 footer {
     margin-top: 1em;
-    border-top: 1px solid #000;
+    border-top: var(--border);
     text-align: center;
 }
 
