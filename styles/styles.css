@@ -20,6 +20,9 @@ body {
 nav {
     background-color: var(--background-color);
     padding: var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 nav a {
@@ -34,8 +37,18 @@ h1 {
     border-bottom: var(--border);
 }
 
+.grid {
+    display: grid;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
 main {
     max-width: 640px;
+    grid-column: 2/3;
+
 }
 
 main img {
@@ -56,6 +69,8 @@ aside {
     width: 20em;
     text-align: center;
     position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 aside img {
