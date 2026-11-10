@@ -132,7 +132,7 @@ section {
 section h2 {
     text-align: center;
     margin-bottom: 8px;
-    background-color: var(--accent2-color);
+    background-color: var(--secondary-color);
 }
 
 .history {
@@ -185,7 +185,7 @@ footer {
     align-items: center;
     justify-content: space-around;
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--accent2-color);
 }
 
 footer p {
