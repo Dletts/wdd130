@@ -185,7 +185,7 @@ footer {
     align-items: center;
     justify-content: space-around;
     background-color: var(--primary-color);
-    color: var(--accent2-color);
+    color: var(--secondary-color);
 }
 
 footer p {
