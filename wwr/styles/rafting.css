@@ -7,6 +7,8 @@
     /* dark slate blue */
     --accent2-color: #e9c46a;
     /* light golden yellow */
+    --light-color: #f5f5f5;
+    /* light gray*/
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -25,14 +27,9 @@ body {
 header,
 main,
 footer {
-    width: 840px;
+    width: 100%;
+    max-width: 840px;
     margin: 0 auto;
-}
-
-header,
-footer {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
 }
 
 h1,
@@ -49,13 +46,39 @@ article {
     padding: 8px;
 }
 
-.socialmedia a {
-    text-decoration: none;
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    background-color: var(--primary-color);
 }
 
-.socialmedia img {
-    width: 32px;
+header img {
+    width: 120px;
     height: auto;
+    display: block;
+    margin: 16px auto;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    border: 1px solid #fff;
+    border-radius: 6px;
+}
+
+header nav li {
+    flex: 1;
+}
+
+header nav a {
+    display: block;
+    padding: 10px 8px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    color: var(--accent1-color);
+    border-right: 1px solid var(--accent1-color);
 }
 
 .hero {
@@ -72,12 +95,11 @@ article {
     position: absolute;
     top: 20px;
     width: 100%;
+    margin: 0;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
+    background-color: rgba(38, 70, 83, 0.8);
     color: #fff;
-    /* white text – make sure there is enough contrast with the background-color */
 }
 
 .hero article {
@@ -85,16 +107,103 @@ article {
     bottom: 0;
     left: 0;
     width: calc(100% - 32px);
-    overflow: auto;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 1px solid var(--accent1-color);
     border-radius: 12px;
 }
 
 .hero article img {
     float: right;
     width: 125px;
+    margin: 0 0 8px 16px;
+    border-radius: 8px;
 }
 
-h2 {
+.hero article p {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    background-color: var(--light-color);
+    border: 1px solid var(--accent1-color);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 8px;
     background-color: var(--accent2-color);
+}
+
+.history {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.history h2 {
+    grid-column: 1 / -1;
+}
+
+.history p {
+    margin: 0;
+    padding: 0;
+}
+
+.history img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.adventures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+    text-align: center;
+}
+
+.adventures h2 {
+    grid-column: 1 / -1;
+}
+
+.adventures figure img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.adventures figcaption {
+    margin-top: 6px;
+    font-size: 0.9rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+}
+
+footer p {
+    flex: 1;
+    text-align: center;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 8px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    display: block;
+    width: 32px;
+    height: auto;
 }
